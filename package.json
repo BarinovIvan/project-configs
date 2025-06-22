@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "lint:styles": "stylelint \"**/*.{vue,scss}\"",
     "format": "prettier --write .",
-    "lint-staged": "npm run format && npm run lint:styles -- --fix && npm run lint -- --fix",
+    "lint:fix": "npm run format && npm run lint:styles -- --fix && npm run lint -- --fix",
     "prepare": "husky"
   },
   "private": true,
@@ -20,6 +20,7 @@
     "eslint-plugin-vue": "^10.2.0",
     "globals": "^16.2.0",
     "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
     "postcss-html": "^1.8.0",
     "postcss-import": "^16.1.0",
     "prettier": "^3.5.3",
@@ -27,5 +28,10 @@
     "stylelint-config-recess-order": "^7.1.0",
     "stylelint-config-standard-scss": "^15.0.1",
     "stylelint-config-standard-vue": "^1.0.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": "eslint --fix",
+    "*.{vue,scss}": "stylelint --fix",
+    "*.{js,ts,vue,scss,md,json}": "prettier --write"
   }
 }
