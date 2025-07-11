@@ -22,7 +22,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "postcss-html": "^1.8.0",
-    "postcss-import": "^16.1.0",
+    "postcss-scss": "^4.0.9",
     "prettier": "^3.5.3",
     "stylelint": "^16.21.0",
     "stylelint-config-recess-order": "^7.1.0",
